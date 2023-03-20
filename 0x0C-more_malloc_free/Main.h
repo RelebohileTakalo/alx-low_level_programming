@@ -2,7 +2,7 @@
 #define MAIN_H
 
 /**
- * Auth: Promise Nwhator
+ * Auth: Relebohile Takalo
  * Desc: Header file containing prototypes for all functions
  *       used in the 0x0C-more_malloc_free directory.
  */
