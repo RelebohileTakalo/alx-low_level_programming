@@ -1,23 +1,34 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
- * _calloc - Main Entry
- * @nmemb: input
- * @size: input
- * Return: 0
+ * _calloc - Entry point
+ * Description: Allocates memory for an array, using malloc
+ * @nmemb: Integer
+ * @size: Integer
+ * Return: ptr
  */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-char *p;
-unsigned int i;
+	unsigned int total_size;
+	void *ptr;
 
-if (nmemb == 0 || size == 0)
-return (NULL);
-p = malloc(nmemb * size);
-if (p == NULL)
-return (NULL);
-for (i = 0; i < (nmemb * size); i++)
-p[i] = 0;
-return (p);
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
+	/* Calculate total size of memory block to allocate */
+	total_size = nmemb * size;
+	/* Allocate memory using malloc */
+	ptr = malloc(total_size);
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	/* Set the allocated memory to zero */
+	memset(ptr, 0, total_size);
+	return (ptr);
 }

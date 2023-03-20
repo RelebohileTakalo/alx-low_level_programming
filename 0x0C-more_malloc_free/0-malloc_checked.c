@@ -1,17 +1,22 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * malloc_checked - Main Entry
- * @b: input
- * Return: 0
+ * malloc_checked - Entry point
+ * Description: Allocates memory using malloc
+ * @b: Integer
+ * Return: ptr
  */
+
 void *malloc_checked(unsigned int b)
 {
-void *p;
+	void *ptr = malloc(b);
+	/* Locate memory of size b using malloc */
 
-p = malloc(b);
-if (p == NULL)
-exit(98);
-return (p);
+	if (ptr == NULL) /* Check if malloc failed */
+	{
+		exit(98); /* If malloc failed, terminate the program with exit status 98 */
+	}
+	return (ptr);
 }
