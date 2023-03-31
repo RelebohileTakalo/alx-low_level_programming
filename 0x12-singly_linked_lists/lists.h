@@ -18,7 +18,7 @@ typedef struct list_s
 {
 char *str;
 unsigned int len;
-lstruct list_s *next;
+struct list_s *next;
 } list_t;
 
 /* function prototypes for all files */
