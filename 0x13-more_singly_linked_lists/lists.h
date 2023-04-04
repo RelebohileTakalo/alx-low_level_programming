@@ -1,5 +1,5 @@
-#ifndef lists.h
-#define lists.h
+#ifndef "LISTS.H"
+#define "LISTS.H"
 
 #include <stdio.h> /* printf */
 #include <stdlib.h> /* malloc, free */
